@@ -1,9 +1,11 @@
 package com.epam.webservices.impl;
 
+import com.epam.webservices.*;
+
 import javax.jws.*;
 
 @WebService(endpointInterface = "com.epam.webservices.HelloService")
-public class HelloServiceImpl {
+public class HelloServiceImpl implements HelloService {
 
     @WebMethod(operationName = "getSimple")
     public String getSimple() {

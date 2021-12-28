@@ -114,25 +114,6 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
                 </plugin>
-
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>jaxws-maven-plugin</artifactId>
-                    <version>2.6</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>wsgen</goal>
-                            </goals>
-                            <phase>generate-sources</phase>
-                            <configuration>
-                                <sei>com.epam.webservices</sei>
-                                <genWsdl>true</genWsdl> <!-- for demo purpose only, the wepapp does not need those the generated wsdl files-->
-                                <keep>true</keep>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
@@ -142,24 +123,6 @@
                         <port>8080</port>
                     </configuration>
                 </plugin>
-<!--                TODO issue with deploy -->
-<!--                TODO run with org.codehaus.cargo:cargo-maven2-plugin:run-->
-<!--                <plugin>-->
-<!--                    <groupId>org.codehaus.cargo</groupId>-->
-<!--                    <artifactId>cargo-maven2-plugin</artifactId>-->
-<!--                    <version>1.7.6</version>-->
-<!--                    <configuration>-->
-<!--                        <container>-->
-<!--                            <containerId>tomcat9x</containerId>-->
-<!--                            <type>embedded</type>-->
-<!--                        </container>-->
-<!--                        <configuration>-->
-<!--                            <properties>-->
-<!--                                <cargo.servlet.port>8080</cargo.servlet.port>-->
-<!--                            </properties>-->
-<!--                        </configuration>-->
-<!--                    </configuration>-->
-<!--                </plugin>-->
             </plugins>
         </pluginManagement>
     </build>
