@@ -12,4 +12,7 @@ public interface HelloService {
 
     @WebMethod
     String getNum(@WebParam(name = "num") int num);
+
+    @WebMethod
+    User saveUser(@WebParam(name = "user") User user);
 }
